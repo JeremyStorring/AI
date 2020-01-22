@@ -266,7 +266,7 @@ class Game(object):
                         if state.gameState[xpos, ypos][0] != "S":
                             # add all positions around S if it is valid, and is not another sith
                             actions.append((state.maxsTurn, i[0], xpos, ypos, i[1], i[2]))
-        # Change if have time, currently removes positions that would allow a sith to stay in the same spot
+        # Currently removes positions that would allow a sith to stay in the same spot. This could be simplified.
         toRemove = []
         if len(actions) > 0:
             for i in range(len(actions)):
